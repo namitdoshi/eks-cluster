@@ -15,7 +15,7 @@ pipeline {
 						--nodes-min 1 \
 						--nodes-max 3 \
 						--node-ami auto \
-						--region us-west-1 \
+						--region us-west-2 \
 						--zones us-west-2a \
 						--zones us-west-2b \
 						--zones us-west-2c \
