@@ -7,7 +7,7 @@ pipeline {
 				withAWS(region:'us-west-2', credentials:'aws-creds') {
 					sh '''
 						eksctl create cluster \
-						--name capstonecluster \
+						--name udacity-capstone-cluster \
 						--version 1.13 \
 						--nodegroup-name standard-workers \
 						--node-type t2.small \
@@ -27,7 +27,7 @@ pipeline {
 			steps {
 				withAWS(region:'us-west-2', credentials:'aws-creds') {
 					sh '''
-						aws eks --region us-west-2 update-kubeconfig --name capstonecluster
+						aws eks --region us-west-2 update-kubeconfig --name udacity-capstone-cluster
 					'''
 				}
 			}
